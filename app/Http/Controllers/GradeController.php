@@ -11,4 +11,8 @@ class GradeController extends Controller
         $grades = Grade::orderBy('person')->get();
         return view('grades.index', [ 'grades' => $grades]);
     }
+
+    public function shown(Grade $grade){
+        return view('grades.show', ['grade' => $grade]);
+    }
 }

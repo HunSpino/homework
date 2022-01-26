@@ -9,10 +9,12 @@ class HomeController extends Controller
 {
     public function index(){
 
-        $gradeCount = Grade::count();
+        $personCount = Grade::count();
+        $subjectCount = Grade::count();
 
         return view('stats',[
-            'gradeCount' => $gradeCount
+            'personCount' =>$personCount,
+            'subjectCount' => $subjectCount
         ]);
     }
 }
