@@ -29,5 +29,9 @@ class GradeController extends Controller
         $grade->save();
         return redirect()->route('grades.index');
     }
+    public function edit($id){
+        $grade = Grade::find($id);
+        return view('grades.edit', [ 'grade' => $grade]);
+    }
 
 }
