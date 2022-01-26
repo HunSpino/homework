@@ -18,7 +18,7 @@
     @foreach ($grades as $grade)
         <tr>
             <td>
-                <a href="{{ route('grades.show', $grade->id) }}">{{ $grade->person }}</a>
+                <a href="{{ route('grades.edit', $grade->id) }}">{{ $grade->person }}</a>
             </td>
             <td>{{ $grade->subject }}</td>
             <td>{{ $grade->type }}</td>
@@ -27,7 +27,7 @@
     @endforeach
     </table>
     <div>
-        <button>Új adat</button>
+        <button><a href="{{ route('grades.create') }}">Új adat</a></button>
     </div>
 </body>
 </html>

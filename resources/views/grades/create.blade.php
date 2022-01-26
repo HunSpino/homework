@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Új osztályzás</h1>
+    <p><a href="{{ route('grades.index') }}">Vissza a felsorolásra</a></p>
     <form method='POST' action="{{ route('grades.store') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div>
