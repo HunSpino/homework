@@ -7,6 +7,7 @@
     <title>Statues</title>
 </head>
 <body>
+    <p><a href="{{ route('home') }}">Vissza a főoldalra</a></p>
 <table>
         <tr>
             <th>Person</th>
@@ -19,11 +20,14 @@
             <td>
                 <a href="{{ route('grades.show', $grade->id) }}">{{ $grade->person }}</a>
             </td>
-            <td>{{ $garde->subject }}</td>
+            <td>{{ $grade->subject }}</td>
             <td>{{ $grade->type }}</td>
             <td>{{ $grade->grade }}</td>
         </tr>
     @endforeach
     </table>
+    <div>
+        <button>Új adat</button>
+    </div>
 </body>
 </html>
