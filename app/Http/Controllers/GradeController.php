@@ -29,4 +29,5 @@ class GradeController extends Controller
         $grade->save();
         return redirect()->route('grades.index');
     }
+
 }
